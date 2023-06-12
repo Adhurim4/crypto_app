@@ -1,11 +1,11 @@
 import React from 'react';
-import { Collapse, Row, Col, Typography} from 'antd';
+import { Row, Col} from 'antd';
 import { useGetExchangesQuery } from '../services/cryptoApi';
 import Loader from './Loader';
 
 
 const Exchanges = () => {
-  const { data, isFetching } = useGetExchangesQuery();
+  const { isFetching } = useGetExchangesQuery();
 
   if (isFetching) return <Loader />;
 
