@@ -1,18 +1,15 @@
 import React from 'react'
-import {Select, Typography, Row,Col, Column, Card} from 'antd'
+import {Select, Typography, Row,Col, Card} from 'antd'
 import moment from 'moment'
-import Loader from './Loader'
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi'
 
 const {Text, Title} = Typography;
-const {Option} = Select;
 
 const News = ({simplified}) => {
 
   const count = simplified ? 10 : 100;
   const {data:cryptoNews} = useGetCryptoNewsQuery(count);
 
- 
  
   return (
       <Row gutter={[24,24]}>

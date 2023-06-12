@@ -1,8 +1,7 @@
 import React from 'react'
 import {Line} from "react-chartjs-2"
 import {Col, Row, Typography} from "antd";
-import {Chart as ChartJS} from 'chart.js/auto'
- import moment from 'moment';
+import moment from 'moment';
 const {Title} = Typography;
 
 const LineChart = ({coinHistory, currentPrice,coinName}) => {
