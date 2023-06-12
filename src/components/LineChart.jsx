@@ -4,9 +4,12 @@ import { Col, Row, Typography } from 'antd';
 import {Chart as ChartJS} from 'chart.js/auto'
 const { Title } = Typography;
 
+ ChartJS = null ;
+
 const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
   const coinTimestamp = [];
+
 
   for (let i = 0; i < coinHistory?.data?.history?.length; i += 1) {
     coinPrice.push(coinHistory?.data?.history[i].price);
